@@ -20,8 +20,7 @@ function owd_load_plugin_css() {
  function owd_map_shortcode($atts) {
     
    ?>
-   $output = 
-   ('
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
     
@@ -40,11 +39,11 @@ function owd_load_plugin_css() {
     </script>
     </div>
     </center>
-   ');
+
     <?php
 
 
-    return $output;
+
 
 
 }

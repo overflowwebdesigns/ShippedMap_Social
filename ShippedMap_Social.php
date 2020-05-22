@@ -49,6 +49,12 @@ foreach($orders as $order){
         'VA': {fill: 'yellow'}
         }    */ 
     });
+    $('#map').usmap({
+        stateSpecificStyles: {
+        'MD': {fill: 'yellow'},
+        'VA': {fill: 'teal'}
+    } 
+    });
     });
     </script>
     </div>

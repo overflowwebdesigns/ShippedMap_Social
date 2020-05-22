@@ -25,7 +25,7 @@ $args = array(
 
 $posts = get_posts($args);
 
-$orders = wc_get_orders();
+$orders = wc_get_orders(array());
 
 var_dump($orders);
 

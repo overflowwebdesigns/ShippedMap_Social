@@ -44,16 +44,10 @@ foreach($orders as $order){
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
         stateStyles: {fill: '#333333'} //defines the default color for a state. In our case the color of a state we have not shipped products to.
-/*         stateSpecificStyles: {
-        'MD': {fill: 'yellow'}, //Defines the color to a state we have shipped products to.
-        'VA': {fill: 'yellow'}
-        }    */ 
-    });
-    $('#map').usmap({
         stateSpecificStyles: {
-        'MD': {fill: 'yellow'},
-        'VA': {fill: 'teal'}
-    } 
+            'MD': {fill: 'yellow'}, //Defines the color to a state we have shipped products to.
+            'VA': {fill: 'yellow'}
+        }    
     });
     });
     </script>

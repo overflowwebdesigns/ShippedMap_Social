@@ -25,6 +25,8 @@ $args = array(
 
 $posts = get_posts($args);
 
+var_dump($posts);
+
 foreach($posts as $post) {
     $states = get_post_meta($post->ID, _billing_state, false);
     echo $states;

@@ -25,7 +25,12 @@ $query = "select ID from wp_posts WHERE post_type = 'shop_order'";
 
 $results = $wpdb->get_results($query);
 
-var_dump($results);
+foreach($results as $ids) {
+    $query2 = "select _billing_stat from wp_postmeta WHERE post_id =" . $ids;
+    $states = $wpdb -> get_results($query2);
+    echo $states;
+    echo "Line Break";
+}
 
 
    ?>

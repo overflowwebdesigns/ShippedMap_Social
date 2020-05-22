@@ -19,9 +19,9 @@ function owd_load_plugin_css() {
 
  function owd_map_shortcode($atts) {
     
-$wpdb;
+global $wpdb;
 
-$query = "Select ID from wp_posts WHERE post_type = 'shop_order'";
+$query = "select ID from wp_posts WHERE post_type = 'shop_order'";
 
 $results = $wpdb->get_results($query);
 

@@ -25,9 +25,11 @@ $args = array(
 
 $query = new WP_Query($args);
 
+var_dump($query);
+
 if($query-> have_posts()) :
     while($query->have_posts()) : 
-        $results = $query->get_the_ID();
+        $results = $query-> get_the_ID();
         
     endwhile;
 endif;

@@ -23,8 +23,8 @@ $orders = wc_get_orders(array());
 
 foreach($orders as $order){
     $states = get_post_meta($order->ID, '_billing_state', false);
-    var_dump($states);
-    echo $states;
+    $state = array_shift($states);
+    echo $state;
     echo "Line Break";
 }
 

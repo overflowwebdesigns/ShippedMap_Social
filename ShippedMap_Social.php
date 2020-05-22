@@ -27,7 +27,7 @@ $results = $wpdb->get_results($query);
 
 foreach($results as $ids) {
     $query2 = "select _billing_stat from wp_postmeta WHERE post_id =" . $ids;
-    $states = $wpdb -> get_results($query2);
+    $states = $wpdb -> get_row($query2);
     echo $states;
     echo "Line Break";
 }

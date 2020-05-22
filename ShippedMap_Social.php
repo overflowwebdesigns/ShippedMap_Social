@@ -22,7 +22,7 @@ function owd_load_plugin_css() {
 $orders = wc_get_orders(array());
 
 foreach($orders as $order){
-    $states = get_post_meta($order->ID, _billing_state, false);
+    $states = get_post_meta($order->ID, '_billing_state', false);
     echo $states;
     echo "Line Break";
 }

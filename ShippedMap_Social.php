@@ -19,17 +19,16 @@ function owd_load_plugin_css() {
 
  function owd_map_shortcode($atts) {
     
-global $wpdb;
+$args = array(
+    'post_type' => 'shop_order'
+);
 
-$query = "select ID from wp_posts WHERE post_type = 'shop_order'";
+$posts = get_posts($args);
 
-$results = $wpdb->get_results($query);
-
-foreach($results as $ids) {
-    $states = get_post_meta( $ids, '_billing_state', false );
-    var_dump($states);
+foreach($posts as $post) {
+    $states = get_post_meta($post->ID, _billing_state, false);
     echo $states;
-    echo "Line Break"; 
+    echo "LineBreak";
 }
 
 

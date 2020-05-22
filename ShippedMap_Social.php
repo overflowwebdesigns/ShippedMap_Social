@@ -40,11 +40,12 @@ $orders = wc_get_orders(array()); //Gets all orders.
         stateStyles: {fill: '#333333'}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
         stateSpecificStyles: {
             'MD': {fill: 'yellow'}, //Defines the color to a state we have shipped products to.
+            <?php
             foreach($orders as $order){
                 $states = get_post_meta($order->ID, '_billing_state', false); //Takes the order ID's and pulls the state the order is from.
                 $state = array_shift($states);
                 echo "'" . $state . "': {fill: 'yellow'},";  //returns each state we have sent products to.
-            }
+            } ?>
         }    
     });
     });

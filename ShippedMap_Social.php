@@ -114,8 +114,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     // Create the plugin
     jQueryPluginFactory($, 'usmap', methods, getters);
 
-    })(jQuery, document, window, Raphael); 
-    })(jQuery, document, window, Raphael);
+    (jQuery, document, window, Raphael); 
         showLabels: true,
         stateStyles: {fill: '#333333'}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
         stateSpecificStyles: {

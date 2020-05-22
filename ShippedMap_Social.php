@@ -18,22 +18,13 @@ function owd_load_plugin_css() {
 
 
  function owd_map_shortcode($atts) {
-    
-$args = array(
-    'post_type' => 'shop_order'
-);
-
-$posts = get_posts($args);
 
 $orders = wc_get_orders(array());
 
-var_dump($orders);
-
-foreach($posts as $post) {
-    $states = get_post_meta($post->ID, _billing_state, false);
+foreach($orders as $order){
+    $states = get_post_meta($order->ID, _billing_state, false);
     echo $states;
-    echo "LineBreak";
-    var_dump($states);
+    echo "Line Break";
 }
 
 

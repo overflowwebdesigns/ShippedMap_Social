@@ -26,11 +26,9 @@ $query = "select ID from wp_posts WHERE post_type = 'shop_order'";
 $results = $wpdb->get_results($query);
 
 foreach($results as $ids) {
-    $query2 = "select _billing_stat from wp_postmeta WHERE post_id =" . $ids;
-    $states = $wpdb -> get_row($query2);
-    $states = $states->meta_value;
+    $states = get_post_meta( $ids, '_billing_state', true );
     echo $states;
-    echo "Line Break";
+    echo "Line Break"; 
 }
 
 

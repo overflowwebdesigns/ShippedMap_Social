@@ -25,7 +25,9 @@ $args = array(
 
 $posts = get_posts($args);
 
-var_dump($posts);
+$orders = wc_get_orders();
+
+var_dump($orders);
 
 foreach($posts as $post) {
     $states = get_post_meta($post->ID, _billing_state, false);

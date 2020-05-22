@@ -23,7 +23,7 @@ $wpdb;
 
 $query = "Select ID from wp_posts WHERE post_type = 'shop_order'";
 
-$results = $wpdb -> get_results($query);
+$results = $wpdb->get_results($query);
 
 var_dump($results);
 

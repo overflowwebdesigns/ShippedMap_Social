@@ -19,6 +19,19 @@ function owd_load_plugin_css() {
 
  function owd_map_shortcode($atts) {
     
+$args = array(
+    'post_type' => 'shop_order'
+);
+
+$query = new WP_Query($args);
+
+if($query-> have_posts()) :
+    while($query->have_posts()) : 
+        $query->get_the_ID();
+    endwhile;
+endif;
+
+
    ?>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 

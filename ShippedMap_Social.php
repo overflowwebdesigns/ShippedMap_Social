@@ -27,6 +27,7 @@ $results = $wpdb->get_results($query);
 
 foreach($results as $ids) {
     $states = get_post_meta( $ids, '_billing_state', false );
+    var_dump($states);
     echo $states;
     echo "Line Break"; 
 }

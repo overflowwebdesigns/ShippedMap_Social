@@ -17,15 +17,14 @@ function owd_load_plugin_css() {
 }
 
 
- function owd_map_shortcode($atts) {
+function owd_map_shortcode($atts) {
 
-$orders = wc_get_orders(array());
+$orders = wc_get_orders(array()); //Gets all orders.
 
 foreach($orders as $order){
-    $states = get_post_meta($order->ID, '_billing_state', false);
+    $states = get_post_meta($order->ID, '_billing_state', false); //Takes the order ID's and pulls the state the order is from.
     $state = array_shift($states);
-    echo $state;
-    echo "Line Break";
+    echo $state;  //returns each state we have sent products to.
 }
 
 
@@ -42,20 +41,20 @@ foreach($orders as $order){
     <script>
     $(document).ready(function() {
     
-    $('#map').usmap({
+    $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
-        stateStyles: {fill: '#333333'}
-        });
+        stateStyles: {fill: '#333333'} //defines the default color for a state. In our case the color of a state we have not shipped products to.
+        stateSpecificStyles: {
+        'MD': {fill: 'yellow'}, //Defines the color to a state we have shipped products to.
+        'VA': {fill: 'yellow'}
+        }    
+    });
     });
     </script>
     </div>
     </center>
 
     <?php
-
-
-
-
 
 }
 

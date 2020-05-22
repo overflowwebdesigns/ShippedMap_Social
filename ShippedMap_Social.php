@@ -19,20 +19,13 @@ function owd_load_plugin_css() {
 
  function owd_map_shortcode($atts) {
     
-$args = array(
-    'post_type' => 'shop_order'
-);
+$wpdb;
 
-$query = new WP_Query($args);
+$query = "Select ID from wp_posts WHERE post_type = 'shop_order'";
 
-var_dump($query);
+$results = $wpdb -> get_results($query);
 
-if($query-> have_posts()) :
-    while($query->have_posts()) : 
-        $results = $query-> get_the_ID();
-        
-    endwhile;
-endif;
+var_dump($results);
 
 
    ?>

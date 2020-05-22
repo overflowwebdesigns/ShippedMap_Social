@@ -29,6 +29,7 @@ foreach($posts as $post) {
     $states = get_post_meta($post->ID, _billing_state, false);
     echo $states;
     echo "LineBreak";
+    var_dump($states);
 }
 
 

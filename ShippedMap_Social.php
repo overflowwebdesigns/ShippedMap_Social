@@ -82,7 +82,11 @@ function owd_map_shortcode($atts) {
 
 $orders = wc_get_orders(array()); //Gets all orders.
 
+    $test = get_option(jt_color_state);
+    $test2 = get_option(jt_shipped_state_color);
 
+    echo $test;
+    echo $test2;
    ?>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 

@@ -109,7 +109,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             foreach($orders as $order){
                 $states = get_post_meta($order->ID, '_billing_state', false); //Takes the order ID's and pulls the state the order is from.
                 $state = array_shift($states);
-                echo "'" . $state . "': {fill: 'yellow'},";  //Defines the color to a state we have shipped products to.
+                echo "'" . $state . "': {fill: '" . get_option(jt_shipped_state_color) . "'"},";  //Defines the color to a state we have shipped products to.
             } ?>
         }    
     });

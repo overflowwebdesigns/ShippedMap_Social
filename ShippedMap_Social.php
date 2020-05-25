@@ -90,15 +90,13 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <center>
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
-    <div id="map" style="width: 800px; height: 800px;">
+    <div id="map" style="width: 600px; height: 600px;">
     <script>
     $(document).ready(function() {
     
     $('#map').usmap({ //Creates interactive JS map
 
         showLabels: true,
-        stroke: 'yellow',
-        stroke-width: 10,
         stateStyles: {fill: <?php echo "'" . get_option('jt_color_states') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
         stateSpecificStyles: {
             <?php

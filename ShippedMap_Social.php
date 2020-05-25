@@ -85,8 +85,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
     $test = get_option('jt_color_state');
     $test2 = get_option('jt_shipped_state_color');
 
-    echo $test;
-    echo $test2;
+   var_dump($test);
+   var_dump($test2);
    ?>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
@@ -103,7 +103,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     $('#map').usmap({ //Creates interactive JS map
 
         showLabels: true,
-        stateStyles: {fill: <?php get_option('jt_color_state'); ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
+        stateStyles: {fill: <?php echo "'" . get_option('jt_color_state') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
         stateSpecificStyles: {
             <?php
             foreach($orders as $order){

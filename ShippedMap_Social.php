@@ -103,7 +103,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     $('#map').usmap({ //Creates interactive JS map
 
         showLabels: true,
-        stateStyles: {fill: <?php echo "'" . get_option('jt_color_state') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
+        stateStyles: {fill: <?php get_option('jt_color_states'); ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
         stateSpecificStyles: {
             <?php
             foreach($orders as $order){

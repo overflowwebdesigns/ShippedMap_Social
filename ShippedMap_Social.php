@@ -44,32 +44,28 @@ function plugin_settings_page_content(){
 
 function jt_wrf_display_options(){
 
-    add_settings_section( 'header_section', 'Product Selection Settings', 'jt_header_func', 'shipped_map_social' );
-    add_settings_field( 'jt_num_to_keep', 'How Many Prodcuts to Keep', 'jt_num_to_keep', 'shipped_map_social', 'header_section' );
-    add_settings_field( 'jt_when_to_change', 'How Often Should Featured Products Change (In Seconds)', 'jt_when_to_change', 'shipped_map_social', 'header_section' );
-    register_setting( 'header_section', 'jt_num_to_keep' );
-    register_setting( 'header_section', 'jt_when_to_change' );
+    add_settings_section( 'header_section', 'ShippedMap Social Settings', 'jt_header_func', 'shipped_map_social' );
+    add_settings_field( 'jt_color_states', 'What color should not shipped to states be?', 'jt_color_states', 'shipped_map_social', 'header_section' );
+    add_settings_field( 'jt_shipped_state_color', 'What color should states you have shipped to be?', 'jt_shipped_state_color', 'shipped_map_social', 'header_section' );
+    register_setting( 'header_section', 'jt_color_states' );
+    register_setting( 'header_section', 'jt_shipped_state_color' );
     
 }
 
-function jt_header_func(){echo "This will configured various options associated with the plugin.";}
+function jt_header_func(){echo "Availabke options for this plugin.";}
 
-function jt_num_to_keep(){
+function jt_color_states(){
 
     ?>
-    <input type="number" name="jt_num_to_keep" id="jt_num_to_keep" value="<?php echo get_option( 'jt_num_to_keep' ); ?>" />
+    <input type="color" name="jt_color_states" id="jt_color_states" value="<?php echo get_option( 'jt_color_states' ); ?>" />
     <?php
 }
 
-function jt_when_to_change(){
+function jt_shipped_state_color(){
 
     ?>
-    <input type="number" name="jt_when_to_change" id="jt_when_to_change" value="<?php echo get_option( 'jt_when_to_change' ); ?>" />
+    <input type="color" name="jt_shipped_state_color" id="jt_shipped_state_color" value="<?php echo get_option( 'jt_shipped_state_color' ); ?>" />
     <?php
-}
-
-function reconfigure_options(){
-    RunFeatured();
 }
 
 

@@ -90,7 +90,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <center>
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
-    <div id="map" style="width: 800px; height: auto;">
+    <div id="map" style="width: 700px; height: auto;">
     <script>
     $(document).ready(function() {
     

@@ -93,7 +93,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <div id="map" style="width: auto; height: 800px;">
     <div id="clicked-state">
     <script>
-    $(document).ready(function() {
+
     
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
@@ -112,7 +112,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 console.log('You clicked '+data.name);
         }
     });
-    });
+
     </script>
     </div>
     </div>

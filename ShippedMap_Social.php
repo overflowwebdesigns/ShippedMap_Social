@@ -83,7 +83,7 @@ function owd_map_shortcode($atts) {
 $orders = wc_get_orders(array()); //Gets all orders.
 
    ?>
-    <div id="openModal" class="modalDialog" style="display: hidden;">
+    <div id="openModal" class="modalDialog" style="display: none;">
     <div>
         <a href="#close" title="Close" class="close">X</a>
         <h2>Modal Box</h2>

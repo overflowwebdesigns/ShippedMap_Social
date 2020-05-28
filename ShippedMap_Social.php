@@ -91,7 +91,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
-    <div id="clicked-state">
     <script>
 
     
@@ -119,7 +118,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close">X</a>
         <h2>Modal Box</h2>
         <p>Hello world</p>
-    </div>
     </div>
     </div>
     </div>

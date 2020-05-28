@@ -109,9 +109,18 @@ $orders = wc_get_orders(array()); //Gets all orders.
         },
         click: function(event, data) {
                 console.log('You clicked '+data.name); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
+                $('#openModal').show();
         }
     });
-
+    <div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>
+            Modal Box</h2>
+        <p>
+            Hello world</p>
+    </div>
+    </div>
     </script>
     </div>
     </div>

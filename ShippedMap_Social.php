@@ -108,8 +108,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             } ?>
         },
         click: function(event, data) {
-                console.log('You clicked '+data.name);
-                lightbox();
+                console.log('You clicked '+data.name); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
         }
     });
 

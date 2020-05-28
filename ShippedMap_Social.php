@@ -85,7 +85,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
    ?>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>
-        <a href="#close" title="Close" class="close">X</a>
+        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
         <p>Hello world</p>
     </div>

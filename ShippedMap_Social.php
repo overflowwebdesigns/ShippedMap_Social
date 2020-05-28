@@ -107,7 +107,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
             } ?>
         }
-
+        click: function(event, data) {
+                console.log('You clicked '+data.name);
+        }
     });
 
     </script>

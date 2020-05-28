@@ -112,6 +112,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 $('#openModal').show();
         }
     });
+    
+    </script>
     <div id="openModal" class="modalDialog">
     <div>
         <a href="#close" title="Close" class="close">X</a>
@@ -121,7 +123,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
             Hello world</p>
     </div>
     </div>
-    </script>
     </div>
     </div>
     </center>

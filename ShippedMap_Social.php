@@ -91,6 +91,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
+    <div id="clicked-state">
     <script>
     $(document).ready(function() {
     
@@ -106,12 +107,14 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
             } ?>
         }
-        mouseover: function(event, data) {
-            console.log('You clicked '+data.name);
+        click: function(event, data) {
+            $('#clicked-state')
+                console.log('You clicked '+data.name);
         }
     });
     });
     </script>
+    </div>
     </div>
     </center>
 

@@ -83,13 +83,6 @@ function owd_map_shortcode($atts) {
 $orders = wc_get_orders(array()); //Gets all orders.
 
    ?>
-    <div id="openModal" class="modalDialog" style="display: none;">
-    <div>
-        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
-        <h2>Modal Box</h2>
-        <p>Hello world</p>
-    </div>
-    </div>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
     
@@ -109,7 +102,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 $states = get_post_meta($order->ID, '_billing_state', false); //Takes the order ID's and pulls the state the order is from.
                 $state = array_shift($states);
                 echo "'" . $state . "': {fill: " . "'" . get_option('jt_shipped_state_color') . "'" . "},"; //Defines the color to a state we have shipped products to.
-
             } ?>
         },
         click: function(event, data) {
@@ -119,6 +111,13 @@ $orders = wc_get_orders(array()); //Gets all orders.
     });
     
     </script>
+    <div id="openModal" class="modalDialog" style="display: none;">
+    <div>
+        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
+        <h2>Modal Box</h2>
+        <p>Hello world</p>
+    </div>
+    </div>
     </div>
     </center>
 

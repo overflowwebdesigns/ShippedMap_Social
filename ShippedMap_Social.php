@@ -112,9 +112,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 $('#openModal').show();
                 
         }
-    });
-    <?php $stateabv = $doc->getElementById('thestate'); ?>
+    }); 
     </script>
+    <?php $stateabv = $doc->getElementById('thestate'); ?>
     </div>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>

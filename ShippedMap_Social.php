@@ -98,9 +98,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         showLabels: true,
         stateStyles: {fill: <?php echo "'" . get_option('jt_color_states') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
-        click: function(event, data) {
-            console.log('You clicked '+data.name),
-        }  
         stateSpecificStyles: {
             <?php
             foreach($orders as $order){

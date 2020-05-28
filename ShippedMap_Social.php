@@ -110,18 +110,17 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 $('#thestate')
                 .text(data.name)
                 $('#openModal').show();
-
                 
         }
     });
-    
+    <?php $stateabv = $doc->getElementById('thestate'); ?>
     </script>
     </div>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
-        <p><?php echo $stateabv ?></p>
+        <p><?php echo $stateabv->TextContent; ?></p>
     </div>
     </div>
     </center>

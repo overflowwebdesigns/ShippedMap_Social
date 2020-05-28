@@ -90,6 +90,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
+    <div id="thestate"></div>
     <script>
 
     
@@ -106,7 +107,11 @@ $orders = wc_get_orders(array()); //Gets all orders.
         },
         click: function(event, data) {
                 console.log('You clicked '+data.name); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
+                $('#thestate');
+                .text(data.name);
                 $('#openModal').show();
+
+                
         }
     });
     
@@ -116,7 +121,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <div>
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
-        <p>Hello world</p>
+        <p><?php echo $stateabv ?></p>
     </div>
     </div>
     </center>

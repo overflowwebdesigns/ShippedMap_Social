@@ -106,7 +106,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 echo "'" . $state . "': {fill: " . "'" . get_option('jt_shipped_state_color') . "'" . "},"; //Defines the color to a state we have shipped products to.
 
             } ?>
-        };
+        },
         click: function(event, data) {
                 console.log('You clicked '+data.name);
         }

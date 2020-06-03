@@ -109,7 +109,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 //console.log('You clicked '+state); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
                 $.ajax({
                 type:'POST',
-                url: '/wp-admin/admin-ajax.php',
+                url: '../../wp-admin/admin-ajax.php',
                 data: {
                     action: 'get_state_information',
                     state: state

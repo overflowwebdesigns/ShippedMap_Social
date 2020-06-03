@@ -130,16 +130,20 @@ $orders = wc_get_orders(array()); //Gets all orders.
     </div>
 <?php
     function get_state_information(){
+
+        global $return;
         $state = $_POST['state'];
 
-        echo "got the state!";
+        $return = "got the state!";
+
+        return $return;
     }
 ?>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
-        <p>Hello world</p>
+        <p>Hello world <?php echo $return ?></p>
     </div>
     </div>
     </center>

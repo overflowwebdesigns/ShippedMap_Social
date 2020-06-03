@@ -133,7 +133,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
 <?php
     function get_state_information(){
 
-        global $data;
         $state = $_POST['state'];
 
         $data = "Some Data!";

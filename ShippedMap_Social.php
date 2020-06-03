@@ -138,6 +138,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         $data = "Some Data!";
 
+        echo "test";
+
         echo $data;
 
     }

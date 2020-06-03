@@ -138,7 +138,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         return $return;
 
-        var_dump($return);
     }
 ?>
     <div id="openModal" class="modalDialog" style="display: none;">
@@ -146,6 +145,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
         <p>Hello world <?php echo $return ?></p>
+        var_dump($return);
     </div>
     </div>
     </center>

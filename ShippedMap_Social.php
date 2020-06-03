@@ -163,5 +163,6 @@ add_shortcode('owd-map', 'owd_map_shortcode');
 add_action('admin_menu', 'create_plugin_settings_page');
 add_action( 'admin_init', 'jt_wrf_display_options' );
 add_action( 'wp_ajax_get_state_information', 'get_state_information' );
+add_action( 'wp_ajax_nopriv_get_state_information', 'get_state_information' );
 
 ?>

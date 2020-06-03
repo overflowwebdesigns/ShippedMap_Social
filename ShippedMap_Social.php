@@ -116,6 +116,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 },
                 success:function (output) {
                     $('#openModal h2').html(state);
+                    $('#openModal p').html(data);
                     $('#openModal').show();
                 },
                 error:function (error) {
@@ -131,12 +132,12 @@ $orders = wc_get_orders(array()); //Gets all orders.
 <?php
     function get_state_information(){
 
-        global $return;
+        global $data;
         $state = $_POST['state'];
 
-        $return = "got the state!";
+        $data = "Some Data!";
 
-        return $return;
+        return $data;
 
     }
 ?>

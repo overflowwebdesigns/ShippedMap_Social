@@ -144,7 +144,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         echo $data;
 
-        wp_die();
+        die();
 
     }
 ?>

@@ -137,6 +137,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
         $return = "got the state!";
 
         return $return;
+
+        var_dump($return);
     }
 ?>
     <div id="openModal" class="modalDialog" style="display: none;">

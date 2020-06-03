@@ -126,13 +126,15 @@ $orders = wc_get_orders(array()); //Gets all orders.
         }
     });
     
-    get_state_information(){
+    </script>
+    </div>
+<?php
+    function get_state_information(){
         $state = $_POST['state'];
 
         echo "got the state!";
     }
-    </script>
-    </div>
+?>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>

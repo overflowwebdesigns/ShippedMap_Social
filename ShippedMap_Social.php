@@ -11,9 +11,8 @@
 
 
 if (!defined('ABSPATH')) die('No direct access allowed');
-
-add_action( 'wp_ajax_get_state_information', 'get_state_information' );
-add_action( 'wp_ajax_nopriv_get_state_information', 'get_state_information' );
+add_action( 'wp_ajax_get_state_images', 'get_state_images' );
+add_action( 'wp_ajax_nopriv_get_state_images', 'get_state_images' );
 
 function create_plugin_settings_page()
 {
@@ -114,7 +113,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 type:'POST',
                 url: '../../wp-admin/admin-ajax.php',
                 data: {
-                    action: "get_state_information",
+                    action: 'get_state_images',
                     state: state
                 },
                 success:function (output) {
@@ -135,7 +134,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     </script>
     </div>
 <?php
-    function get_state_information(){
+    function get_state_images(){
 
         $state = $_POST['state'];
 

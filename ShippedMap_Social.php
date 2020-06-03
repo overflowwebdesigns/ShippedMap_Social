@@ -105,11 +105,32 @@ $orders = wc_get_orders(array()); //Gets all orders.
             } ?>
         },
         click: function(event, data) {
-                console.log('You clicked '+data.name); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
-                $('#openModal').show();
+            var state = data.name;
+                console.log('You clicked '+state); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
+                $.ajax({
+                type:'POST',
+                url: '/wp-admin/admin-ajax.php',
+                data: {
+                    action: 'get_state_information',
+                    state: state
+                },
+                success:function (output) {
+                    $('#openModal h2').html(state);
+                    $('#openModal').show();
+                },
+                error:function (error) {
+                    
+                }
+
+            });
         }
     });
     
+    get_state_information(){
+        $state = $_POST['state'];
+
+        echo "got the state!";
+    }
     </script>
     </div>
     <div id="openModal" class="modalDialog" style="display: none;">

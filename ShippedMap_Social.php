@@ -140,7 +140,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         echo "test";
 
-        wp_send_json($data);
+        echo $data;
+
+        wp_die();
 
     }
 ?>

@@ -111,7 +111,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 type:'POST',
                 url: '../../wp-admin/admin-ajax.php',
                 data: {
-                    action: 'lsdfkljsd_state_images',
+                    action: 'jt_state_images',
                     state: state
                 },
                 success:function (output) {
@@ -130,22 +130,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     
     </script>
     </div>
-<?php
-    /* function jt_state_images(){
-
-        error_log( 'Made it into the Ajax function safe and sound!' );
-
-        $state = $_POST['state'];
-
-        $data = (object) array('test' => 'Some Data!');
-
-
-        sleep(10);
-
-        wp_send_json($data);
-        wp_die($data);
-    } */
-?>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
@@ -166,5 +150,22 @@ add_action('admin_menu', 'create_plugin_settings_page');
 add_action( 'admin_init', 'jt_wrf_display_options' );
 add_action( 'wp_ajax_jt_state_images', 'jt_state_images' );
 add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
+
+
+
+     function jt_state_images(){
+
+        error_log( 'Made it into the Ajax function safe and sound!' );
+
+        $state = $_POST['state'];
+
+        $data = (object) array('test' => 'Some Data!');
+
+
+        sleep(10);
+
+        wp_send_json($data);
+        wp_die($data);
+    } 
 
 ?>

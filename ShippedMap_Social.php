@@ -12,6 +12,8 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
+define( 'WP_DEBUG', true );
+
 function customer_images_post_type(){
 
     $args = array(

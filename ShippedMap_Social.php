@@ -12,6 +12,15 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
+
+add_action( 'wp_enqueue_scripts', 'owd_load_plugin_css' );
+add_shortcode('owd-map', 'owd_map_shortcode');
+add_action('admin_menu', 'create_plugin_settings_page');
+add_action( 'admin_init', 'jt_wrf_display_options' );
+add_action( 'wp_ajax_jt_state_images', 'jt_state_images' );
+add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
+
+
 function create_plugin_settings_page()
 {
 
@@ -143,13 +152,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <?php
 
 }
-
-add_action( 'wp_enqueue_scripts', 'owd_load_plugin_css' );
-add_shortcode('owd-map', 'owd_map_shortcode');
-add_action('admin_menu', 'create_plugin_settings_page');
-add_action( 'admin_init', 'jt_wrf_display_options' );
-add_action( 'wp_ajax_jt_state_images', 'jt_state_images' );
-add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
 
 
 

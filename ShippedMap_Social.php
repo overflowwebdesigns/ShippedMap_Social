@@ -137,10 +137,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         $state = $_POST['state'];
 
-        $data = "Some Data!";
+        $data = array('test' => 'Some Data!');
 
         wp_send_json($data);
-        die();
     }
 ?>
     <div id="openModal" class="modalDialog" style="display: none;">

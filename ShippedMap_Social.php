@@ -101,7 +101,6 @@ function jt_state_images(){
     $state = $_POST['state'];
 
     $query = $wpdb->prepare('SELECT post_id FROM wp_postmeta WHERE meta_key = "state" AND meta_value = "' . $state . '";');
-    echo $query;
     $results = $wpdb->get_results($query);
     
 

@@ -139,9 +139,11 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         $data = "Some Data!";
 
-        echo json_encode($data);
+        //echo json_encode($data);
 
-        wp_die($data);
+        print_r($data);
+
+        wp_die();
 
     }
 ?>

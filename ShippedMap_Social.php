@@ -136,6 +136,19 @@ $orders = wc_get_orders(array()); //Gets all orders.
     
     </script>
     </div>
+    <?php
+     function jt_state_images(){
+
+        error_log( 'Made it into the Ajax function safe and sound!' );
+
+        $state = $_POST['state'];
+
+        //$data = (object) array('test' => 'Some Data!');
+
+        $data = "Some Shit!";
+        echo $state;
+        wp_die();
+    ?>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
@@ -152,17 +165,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
 
 
-     function jt_state_images(){
 
-        error_log( 'Made it into the Ajax function safe and sound!' );
-
-        $state = $_POST['state'];
-
-        //$data = (object) array('test' => 'Some Data!');
-
-        $data = "Some Shit!";
-        echo $state;
-        wp_die();
     } 
 
 

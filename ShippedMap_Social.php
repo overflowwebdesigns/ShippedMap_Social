@@ -128,7 +128,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 },
                 success:function (output) {
                     $('#openModal h2').html(state);
-                    $('#openModal p').html(data);
+                    $('#openModal p').html(output);
                     $('#openModal').show();
                     $(console.log(output));
                 },
@@ -147,7 +147,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
         <p>Hello world <?php echo $return ?></p>
-        <?php var_dump($return); ?>
     </div>
     </div>
     </center>

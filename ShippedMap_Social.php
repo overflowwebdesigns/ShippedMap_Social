@@ -77,6 +77,18 @@ function owd_load_plugin_css() {
     wp_enqueue_style( 'style1', $plugin_url . 'css/map_style.css' );
 }
 
+function jt_state_images(){
+
+    error_log( 'Made it into the Ajax function safe and sound!' );
+
+    $state = $_POST['state'];
+
+    //$data = (object) array('test' => 'Some Data!');
+
+    $data = "Some Shit!";
+    echo $state;
+    wp_die();
+} 
 
 function owd_map_shortcode($atts) {
 
@@ -143,21 +155,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <?php
 
 }
-
-
-
-     function jt_state_images(){
-
-        error_log( 'Made it into the Ajax function safe and sound!' );
-
-        $state = $_POST['state'];
-
-        //$data = (object) array('test' => 'Some Data!');
-
-        $data = "Some Shit!";
-        echo $state;
-        wp_die();
-    } 
 
 
 add_action( 'wp_enqueue_scripts', 'owd_load_plugin_css' );

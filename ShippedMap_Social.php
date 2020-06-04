@@ -163,7 +163,7 @@ add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
 
     
         echo $data;
-    
+        wp_die();
     } 
 
 ?>

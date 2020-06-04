@@ -118,7 +118,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#openModal h2').html(state);
                     $('#openModal p').html(data);
                     $('#openModal').show();
-                    console.log(output);
+                    $(console.log(output));
                 },
                 error:function (error) {
                     

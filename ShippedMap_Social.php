@@ -119,7 +119,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#openModal p').html(data);
                     $('#openModal').show();
                     console.log(output);
-                    alert(output);
                 },
                 error:function (error) {
                     
@@ -142,7 +141,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         echo json_encode($data);
 
-        wp_die();
+        wp_die($data);
 
     }
 ?>

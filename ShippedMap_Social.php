@@ -112,7 +112,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 url: '../../wp-admin/admin-ajax.php',
                 data: {
                     action: 'get_state_images'
-                    //state: state
+                    state: state
                 },
                 success:function (output) {
                     $('#openModal h2').html(state);
@@ -140,7 +140,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         $data = "Some Data!";
 
         wp_send_json($data);
-
+        die();
     }
 ?>
     <div id="openModal" class="modalDialog" style="display: none;">

@@ -111,7 +111,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 type:'POST',
                 url: '../../wp-admin/admin-ajax.php',
                 data: {
-                    action: 'get_state_images'
+                    action: 'get_state_images',
                     state: state
                 },
                 success:function (output) {

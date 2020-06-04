@@ -110,7 +110,7 @@ function jt_state_images(){
     );
     $meta_query = new WP_Meta_Query( $meta_query_args );
 
-    echo $meta_query;
+    var_dump($meta_query);
     wp_die();
 } 
 

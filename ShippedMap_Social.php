@@ -103,8 +103,10 @@ function jt_state_images(){
     $query = $wpdb->prepare('SELECT post_id FROM wp_postmeta WHERE meta_key = "state" AND meta_value = "' . $state . '";');
     $results = $wpdb->get_results($query);
     
+    foreach ($results as $post_id ) {
+        get_post( $post_id );
+    }
 
-    var_dump($results);
     wp_die();
 } 
 

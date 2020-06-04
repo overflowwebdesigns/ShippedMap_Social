@@ -12,10 +12,6 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_DISPLAY', true );
-define( 'WP_DEBUG_LOG', true );
-
 function create_plugin_settings_page()
 {
 

@@ -163,7 +163,6 @@ add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
 
         $data = "Some Shit!";
         echo $data;
-        wp_die();
     } 
 
 ?>

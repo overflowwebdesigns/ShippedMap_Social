@@ -104,7 +104,8 @@ function jt_state_images(){
     $results = $wpdb->get_results($query);
     
     foreach ($results as $post_id ) {
-        get_post( $post_id );
+        $post = get_post( $post_id );
+        echo $post;
     }
 
     wp_die();

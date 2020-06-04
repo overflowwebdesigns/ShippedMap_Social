@@ -12,8 +12,6 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
-define( 'WP_DEBUG', true );
-
 function customer_images_post_type(){
 
     $args = array(
@@ -107,7 +105,7 @@ function jt_state_images(){
     
     foreach ($results as $post_id ) {
         $post = get_post( $post_id );
-        echo $post;
+        var_dump($post);
     }
 
     wp_die();

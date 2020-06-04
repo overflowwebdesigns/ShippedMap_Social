@@ -139,6 +139,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         $data = (object) array('test' => 'Some Data!');
 
+
+        sleep(10);
+
         wp_send_json($data);
         wp_die($data);
     }

@@ -12,6 +12,10 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'WP_DEBUG_LOG', true );
+
 function create_plugin_settings_page()
 {
 
@@ -135,7 +139,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     function get_state_images(){
 
         error_log( 'Made it into the Ajax function safe and sound!' );
-        
+
         $state = $_POST['state'];
 
         $data = "Some Data!";

@@ -134,6 +134,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
 <?php
     function get_state_images(){
 
+        error_log( 'Made it into the Ajax function safe and sound!' );
+        
         $state = $_POST['state'];
 
         $data = "Some Data!";

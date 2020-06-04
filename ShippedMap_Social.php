@@ -161,7 +161,9 @@ add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
 
         $data = (object) array('test' => 'Some Data!');
 
-        wp_send_json($data);
+    
+        echo $data;
+    
     } 
 
 ?>

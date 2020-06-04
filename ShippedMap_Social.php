@@ -162,7 +162,8 @@ add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
         //$data = (object) array('test' => 'Some Data!');
 
         $data = "Some Shit!";
-        echo $data;
+        echo $state;
+        wp_die();
     } 
 
 ?>

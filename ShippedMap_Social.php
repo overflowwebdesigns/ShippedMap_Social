@@ -103,8 +103,8 @@ function jt_state_images(){
     $meta_query_args = array(
         'relation' => 'AND', // Optional, defaults to "AND"
         array(
-            'key'     => 'state',
-            'value'   => $state,
+            'meta_key'     => 'state',
+            'meta_value'   => $state,
             'compare' => '='
         )
     );

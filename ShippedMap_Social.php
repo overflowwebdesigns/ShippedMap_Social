@@ -97,20 +97,14 @@ function owd_load_plugin_css() {
 }
 
 function jt_state_images(){
-
+    global $wpdb;
     $state = $_POST['state'];
 
-    $meta_query_args = array(
-        'relation' => 'AND', // Optional, defaults to "AND"
-        array(
-            'meta_key'     => 'state',
-            'meta_value'   => $state,
-            'compare' => '='
-        )
-    );
-    $meta_query = new WP_Meta_Query( $meta_query_args );
+    $query = $wpdb->prepare('SELECT post_id FROM wp_postmeta WHERE meta_key = "state" AND meta_value = ' . $state . ';');
+    $results = $wpdb->get_results($query);
+    
 
-    var_dump($meta_query);
+    var_dump($results);
     wp_die();
 } 
 

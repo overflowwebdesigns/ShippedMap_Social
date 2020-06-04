@@ -98,14 +98,19 @@ function owd_load_plugin_css() {
 
 function jt_state_images(){
 
-    error_log( 'Made it into the Ajax function safe and sound!' );
-
     $state = $_POST['state'];
 
-    //$data = (object) array('test' => 'Some Data!');
+    $meta_query_args = array(
+        'relation' => 'AND', // Optional, defaults to "AND"
+        array(
+            'key'     => 'state',
+            'value'   => $state,
+            'compare' => '='
+        )
+    );
+    $meta_query = new WP_Meta_Query( $meta_query_args );
 
-    $data = "Some Shit!";
-    echo $state;
+    echo $meta_query;
     wp_die();
 } 
 

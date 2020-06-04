@@ -131,7 +131,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     </script>
     </div>
 <?php
-    function jt_state_images(){
+    /* function jt_state_images(){
 
         error_log( 'Made it into the Ajax function safe and sound!' );
 
@@ -144,7 +144,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         wp_send_json($data);
         wp_die($data);
-    }
+    } */
 ?>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div>

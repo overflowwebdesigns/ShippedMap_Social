@@ -137,7 +137,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
         $state = $_POST['state'];
 
-        $data = array('test' => 'Some Data!');
+        $data = (object) array('test' => 'Some Data!');
 
         wp_send_json($data);
     }

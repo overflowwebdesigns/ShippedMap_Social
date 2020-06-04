@@ -159,10 +159,10 @@ add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
 
         $state = $_POST['state'];
 
-        $data = (object) array('test' => 'Some Data!');
+        //$data = (object) array('test' => 'Some Data!');
 
-    
-        echo json_encode($data);
+        $data = "Some Shit!";
+        echo $data;
         wp_die();
     } 
 

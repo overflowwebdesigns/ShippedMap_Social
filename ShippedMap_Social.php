@@ -12,6 +12,25 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
+function customer_images_post_type(){
+
+    $args = array(
+        'public'    => true,
+        'label' => 'Customer Photos',
+        'menu_icon' => 'dashicons-format-gallery',
+    );
+
+    register_post_type( 'Customer Photos', $args );
+}
+
+add_action( 'init', 'customer_images_post_type' );
+
+
+
+
+
+
+
 function create_plugin_settings_page()
 {
 

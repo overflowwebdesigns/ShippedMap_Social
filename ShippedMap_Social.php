@@ -105,8 +105,8 @@ function jt_state_images(){
     
     foreach ($results as $post_id ) {
         $post = the_field("images", $post_id);
-        echo $post_id;
-        var_dump($post);
+
+        var_dump($post_id);
     }
 
     wp_die();

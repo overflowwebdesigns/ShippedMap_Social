@@ -108,7 +108,7 @@ function jt_state_images(){
         $post = get_field("images", $post_id);
 
         //echo "<img src=" . $post . ">";
-        echo '<div id="swiper" class="swiper-slide">' . $post . '</div>';
+        echo '<div id="swiper" class="swiper-slide"><img src=' . $post . '></div>';
 
     }
 

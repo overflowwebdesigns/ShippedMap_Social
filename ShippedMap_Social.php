@@ -106,7 +106,7 @@ function jt_state_images(){
     foreach ($results as $ID ) {
         //$post = the_field("images", $post_id);
         $test = $ID->post_id;
-        vardump($test);
+        echo $test;
 
     }
 

@@ -107,7 +107,8 @@ function jt_state_images(){
         $post_id = $ID->post_id;
         $post = get_field("images", $post_id);
 
-        echo "<img src=" . $post . ">";
+        //echo "<img src=" . $post . ">";
+        echo '<div id="swiper" class="swiper-slide">' . $post . '</div>';
 
     }
 
@@ -180,7 +181,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div id="swiper" class="swiper-slide">Slide 1</div>
+                <div id="swiper" class="swiper-slide"></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>

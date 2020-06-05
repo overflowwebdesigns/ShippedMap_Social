@@ -121,6 +121,10 @@ $orders = wc_get_orders(array()); //Gets all orders.
    ?>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     
     <center>
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
@@ -152,9 +156,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 },
                 success:function (output) {
                     $('#openModal h2').html(state);
-                    $('#openModal p').html(output);
+                    $('#swiper').html(output);
                     $('#openModal').show();
-                    $(console.log(output));
                 },
                 error:function (error) {
                     
@@ -171,6 +174,24 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
         <p>Hello world</p>
+
+                <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div id="swiper" class="swiper-slide">Slide 1</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
     </div>
     </div>
     </center>

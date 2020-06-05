@@ -107,7 +107,7 @@ function jt_state_images(){
         $post_id = $ID->post_id;
         $post = get_field("images", $post_id);
 
-        echo $post;
+        echo "<img src=" . $post . ">";
 
     }
 

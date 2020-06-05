@@ -104,9 +104,10 @@ function jt_state_images(){
     $results = $wpdb->get_results($query);
 
     foreach ($results as $ID ) {
-        //$post = the_field("images", $post_id);
-        $test = $ID->post_id;
-        echo $test;
+        $post_id = $ID->post_id;
+        $post = the_field("images", $post_id);
+
+        echo $post;
 
     }
 

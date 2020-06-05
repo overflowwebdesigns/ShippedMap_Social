@@ -93,7 +93,7 @@ function jt_shipped_state_color(){
 function owd_load_plugin_css() {
     $plugin_url = plugin_dir_url( __FILE__ );
 
-    wp_enqueue_style( 'style1', $plugin_url . 'css/map_style.css' );
+    wp_enqueue_style( 'style1', $plugin_url . 'css/style.css' );
 }
 
 function jt_state_images(){

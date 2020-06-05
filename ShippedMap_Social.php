@@ -105,7 +105,7 @@ function jt_state_images(){
 
     foreach ($results as $ID ) {
         $post_id = $ID->post_id;
-        $post = the_field("images", $post_id);
+        $post = get_field("images", $post_id);
 
         echo $post;
 

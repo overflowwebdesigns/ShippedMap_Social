@@ -23,13 +23,6 @@ function customer_images_post_type(){
     register_post_type( 'Customer Photos', $args );
 }
 
-add_action( 'init', 'customer_images_post_type' );
-
-
-
-
-
-
 
 function create_plugin_settings_page()
 {
@@ -107,8 +100,9 @@ function jt_state_images(){
         $post_id = $ID->post_id;
         $post = get_field("images", $post_id);
 
+        wp_send_json($post);
         //echo "<img src=" . $post . ">";
-        echo '<div id="swiper" class="swiper-slide"><img src=' . $post . '></div>';
+        //echo '<div id="swiper" class="swiper-slide"><img src=' . $post . '></div>';
 
     }
 
@@ -208,5 +202,6 @@ add_action('admin_menu', 'create_plugin_settings_page');
 add_action( 'admin_init', 'jt_wrf_display_options' );
 add_action( 'wp_ajax_jt_state_images', 'jt_state_images' );
 add_action( 'wp_ajax_nopriv_jt_state_images', 'jt_state_images' );
+add_action( 'init', 'customer_images_post_type' );
 
 ?>

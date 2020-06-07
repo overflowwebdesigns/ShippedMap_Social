@@ -100,9 +100,9 @@ function jt_state_images(){
         $post_id = $ID->post_id;
         $post = get_field("images", $post_id);
 
-        wp_send_json($post);
+        //wp_send_json($post);
         //echo "<img src=" . $post . ">";
-        //echo '<div id="swiper" class="swiper-slide"><img src=' . $post . '></div>';
+        echo '<div id="swiper" class="swiper-slide"><img src=' . wp_send_json($post) . '></div>';
 
     }
 

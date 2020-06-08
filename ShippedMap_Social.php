@@ -151,7 +151,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     action: 'jt_state_images',
                     state: state
                 },
-                dataType: "json",
+                //dataType: "json",
                 success:function (output) {
                     $('#openModal h2').html(state);
                     $('#swiper').html(output);

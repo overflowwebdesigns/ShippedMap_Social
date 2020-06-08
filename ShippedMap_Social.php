@@ -103,7 +103,7 @@ function jt_state_images(){
         //wp_send_json($post);
         //echo "<img src=" . $post . ">";
         $post_encode = wp_json_encode($post);
-        wp_send_json( $post_encode );
+        print_r($post_encode);
         //echo '<div id="swiper" class="swiper-slide"><img src=' . wp_send_json($post) . '></div>';
 
     }

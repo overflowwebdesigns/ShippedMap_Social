@@ -156,7 +156,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 success:function (output) {
                     $('#openModal h2').html(state);
                     var myArr = JSON.parse(output);
-                    alert(myArr);
+                    alert(myArr[0]);
                     //$('#swiper').html(myArr[0]);
                     $('#openModal').show();
                 },

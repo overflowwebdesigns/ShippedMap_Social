@@ -155,10 +155,10 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 dataType: "json",
                 success:function (output) {
                     $('#openModal h2').html(state);
-                    //var myArr = JSON.parse(output);
+                    var myArr = JSON.parse(output);
                     //alert(myArr[0]);
-                    alert(output);
-                    $('#swiper').html(output);
+                    alert(myArr);
+                    $('#swiper').html(myArr);
                     $('#openModal').show();
                 },
                 error:function (error) {

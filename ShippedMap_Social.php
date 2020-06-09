@@ -185,9 +185,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div id="swiper" class="swiper-wrapper">
                 <!-- Slides -->
-                <div id="swiper"></div>
+                
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -207,6 +207,29 @@ $orders = wc_get_orders(array()); //Gets all orders.
 
 }
 
+<script>
+var mySwiper = new Swiper ('.swiper-container', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+})
+</script>
 
 add_action( 'wp_enqueue_scripts', 'owd_load_plugin_css' );
 add_shortcode('owd-map', 'owd_map_shortcode');

@@ -132,7 +132,27 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
     <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
 
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    })
     
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
@@ -206,32 +226,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <?php
 
 }
-?>
-<script>
-var mySwiper = new Swiper ('.swiper-container', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-})
-</script>
-
-<?php
 
 add_action( 'wp_enqueue_scripts', 'owd_load_plugin_css' );
 add_shortcode('owd-map', 'owd_map_shortcode');

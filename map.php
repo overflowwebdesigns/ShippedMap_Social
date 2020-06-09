@@ -92,14 +92,14 @@ $orders = wc_get_orders(array()); //Gets all orders.
         //initialize swiper when document ready
             var mySwiper = new Swiper ('.swiper-container', {
                 // Optional parameters
-                direction: 'vertical',
+                direction: 'horizontal',
                 loop: true
             })
         });
         </script>
     </div>
     </div>
-    
+
     </center>
     </body>
     </html>

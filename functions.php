@@ -1,5 +1,8 @@
 <?php
 
+// This file holds the functions used for the main plugin.
+
+
 function customer_images_post_type(){
 
 $args = array(

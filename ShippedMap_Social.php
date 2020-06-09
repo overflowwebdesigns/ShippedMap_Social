@@ -212,8 +212,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
             },
 
             navigation: {
-                nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',           
             },
         })
         </script>

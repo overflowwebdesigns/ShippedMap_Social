@@ -206,6 +206,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
 
             // If we need pagination
             pagination: {

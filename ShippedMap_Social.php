@@ -133,14 +133,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <div id="map" style="width: auto; height: 800px;">
     <script>
 
-    $(document).ready(function () {
-    //initialize swiper when document ready
-    var mySwiper = new Swiper ('.swiper-container', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true
-    })
-    });
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
         stateStyles: {fill: <?php echo "'" . get_option('jt_color_states') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
@@ -193,27 +185,14 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <script src="https://unpkg.com/swiper/js/swiper.js"></script>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         <script>
+        $(document).ready(function () {
+        //initialize swiper when document ready
         var mySwiper = new Swiper ('.swiper-container', {
-        // Optional parameters
-        direction: 'vertical',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-           el: '.swiper-pagination',
-         },
-
-          // Navigation arrows
-         navigation: {
-             nextEl: '.swiper-button-next',
-             prevEl: '.swiper-button-prev',
-         },
-
-         // And if we need scrollbar
-         scrollbar: {
-            el: '.swiper-scrollbar',
-         },
-         })
+            // Optional parameters
+            direction: 'vertical',
+            loop: true
+        })
+        });
         </script>
                 <!-- Slider main container -->
         <div class="swiper-container">

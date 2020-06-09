@@ -132,27 +132,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
     <script>
-    var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    })
     
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
@@ -201,7 +181,33 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
         <p>Hello world</p>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
 
+        // If we need pagination
+        pagination: {
+           el: '.swiper-pagination',
+         },
+
+          // Navigation arrows
+         navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+         },
+
+         // And if we need scrollbar
+         scrollbar: {
+            el: '.swiper-scrollbar',
+         },
+         })
+        </script>
                 <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->

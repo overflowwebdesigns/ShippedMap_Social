@@ -148,7 +148,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         click: function(event, data) {
             var state = data.name;
             var i;
-            var slies = "";
+            var slides = "";
                 //console.log('You clicked '+state); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
                 $.ajax({
                 type:'POST',

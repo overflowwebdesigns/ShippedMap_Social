@@ -200,12 +200,20 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <div class="swiper-scrollbar"></div>
         </div>
         <script>
-        var swiper = new Swiper('.swiper-container', {
+        var MySwiper = new Swiper ('swiper-container', {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        });
+        })
         </script>
     </div>
     </div>

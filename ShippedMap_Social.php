@@ -201,6 +201,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
         </div>
         <script>
         var swiper = new Swiper('.swiper-container', {
+            observer: true, 
+            observeParents: true
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',

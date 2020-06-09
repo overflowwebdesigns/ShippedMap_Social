@@ -153,6 +153,14 @@ $orders = wc_get_orders(array()); //Gets all orders.
       el: '.swiper-scrollbar',
     },
     })
+
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
         stateStyles: {fill: <?php echo "'" . get_option('jt_color_states') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.

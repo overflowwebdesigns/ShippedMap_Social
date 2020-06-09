@@ -204,7 +204,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <script>
         var mySwiper = new Swiper ('.swiper-container', {
             // Optional parameters
-            direction: 'vertical',
+            direction: 'horizontal',
             loop: true,
 
             // If we need pagination

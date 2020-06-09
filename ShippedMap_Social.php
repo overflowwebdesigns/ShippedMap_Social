@@ -147,6 +147,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         },
         click: function(event, data) {
             var state = data.name;
+            var i;
                 //console.log('You clicked '+state); //This is going to be a pop up lightbox style image slider that opens to show images of people from those states wearing the products.
                 $.ajax({
                 type:'POST',
@@ -157,9 +158,11 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 },
                 dataType: "json",
                 success:function (output) {
+                    for (i = 0; i < output.length; i++) {
+                        slides += '<div class="swiper-slide"><img src=' + output[i] + '</div><br>';
+                    }
                     $('#openModal h2').html(state);
-                    alert(output);
-                    $('#swiper').html(output[0]);
+                    $('#swiper').html(slides);
                     $('#openModal').show();
                 },
                 error:function (error) {

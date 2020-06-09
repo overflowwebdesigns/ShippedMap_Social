@@ -206,7 +206,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <?php
 
 }
-
+?>
 <script>
 var mySwiper = new Swiper ('.swiper-container', {
   // Optional parameters
@@ -230,6 +230,8 @@ var mySwiper = new Swiper ('.swiper-container', {
   },
 })
 </script>
+
+<?php
 
 add_action( 'wp_enqueue_scripts', 'owd_load_plugin_css' );
 add_shortcode('owd-map', 'owd_map_shortcode');

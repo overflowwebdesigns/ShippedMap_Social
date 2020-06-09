@@ -132,7 +132,27 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
     <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
 
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    })
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
         stateStyles: {fill: <?php echo "'" . get_option('jt_color_states') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.
@@ -180,21 +200,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <h2>Modal Box</h2>
         <p>Hello world</p>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-        <script>
-        $(document).ready(function () {
-        //initialize swiper when document ready
-        var mySwiper = new Swiper ('.swiper-container', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true
-        })
-        });
-        </script>
-                <!-- Slider main container -->
+        <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div id="swiper" class="swiper-wrapper">

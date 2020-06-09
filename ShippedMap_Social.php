@@ -120,10 +120,13 @@ function owd_map_shortcode($atts) {
 $orders = wc_get_orders(array()); //Gets all orders.
 
    ?>
+    <html>
+    <head>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    </head>
     <center>
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
     <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
@@ -172,6 +175,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     
     </script>
     </div>
+    <body>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div class="modal-content">
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
@@ -206,6 +210,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
     </div>
     </div>
     </center>
+    </body>
+    </html>
 
     <?php
 

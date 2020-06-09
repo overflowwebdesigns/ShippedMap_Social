@@ -88,21 +88,18 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <div class="swiper-scrollbar"></div>
         </div>
         <script>
-        var mySwiper = new Swiper ('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: 1,
-
-            pagination: '.swiper-pagination',
-            paginationClickable: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-        })
+        $(document).ready(function () {
+        //initialize swiper when document ready
+            var mySwiper = new Swiper ('.swiper-container', {
+                // Optional parameters
+                direction: 'vertical',
+                loop: true
+            })
+        });
         </script>
     </div>
     </div>
+    
     </center>
     </body>
     </html>

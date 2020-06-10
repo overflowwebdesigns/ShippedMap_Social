@@ -94,6 +94,10 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 // Optional parameters
                 direction: 'horizontal',
                 loop: true
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
             })
         });
         </script>

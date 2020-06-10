@@ -102,7 +102,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             	prevEl: '.swiper-button-prev',
             }
         })
-        </script>
+    </script>
     </div>
     </div>
 

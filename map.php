@@ -10,8 +10,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <head>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     </head>
     <center>
     <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>

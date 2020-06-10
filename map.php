@@ -43,7 +43,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 dataType: "json",
                 success:function (output) {
                     for (i = 0; i < output.length; i++) {
-                        slides += '<div class="swiper-slide"><img src=' + output[i] + '></div>';
+                        slides += '<div class="swiper-slide"><img src=' + output[i] + '></div><br>';
                     }
                     $('#openModal h2').html(state);
                     $('#swiper').html(slides);
@@ -93,7 +93,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
             slidesPerView: 1,
             observer: true,
             observeParents: true,
-            loopedSlides: 2,
 
             pagination: {
             el: '.swiper-pagination',

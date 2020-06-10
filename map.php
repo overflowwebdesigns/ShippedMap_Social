@@ -73,8 +73,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
-            <div id="swiper" class="swiper-wrapper">
-                <!-- Slides -->
+            <div class="swiper-wrapper">
+                <div id="swiper"></div>
                 
             </div>
             <!-- If we need pagination -->

@@ -94,7 +94,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
             observer: true,
             observeParents: true,
             initialSlide: 0, //this one accept a number according to docs
-            slidesPerColumn: 1 //number
 
             pagination: {
             el: '.swiper-pagination',

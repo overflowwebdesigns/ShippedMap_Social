@@ -17,6 +17,13 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <div id="map" style="width: auto; height: 800px;">
     <script>
 
+    $('body').click(function (event) 
+    {
+    if(!$(event.target).closest('#openModal').length && !$(event.target).is('#openModal')) {
+        $(".modalDialog").hide();
+    }     
+    });
+
     $('#map').usmap({ //Creates interactive JS map
         showLabels: true,
         stateStyles: {fill: <?php echo "'" . get_option('jt_color_states') . "'"; ?>}, //defines the default color for a state. In our case the color of a state we have not shipped products to.

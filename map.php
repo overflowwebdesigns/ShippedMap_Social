@@ -88,7 +88,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         var mySwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
-            loop: true,
+            loop: false,
             centeredSlides: true,
             slidesPerView: 1,
             observer: true,

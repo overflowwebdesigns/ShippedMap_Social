@@ -109,7 +109,6 @@ header("Content-Type: application/json");
 $return['images'] = $images;
 $return['names'] = $titles;
 echo wp_json_encode($return);
-var_dump($return);
 
 wp_die();
 } 

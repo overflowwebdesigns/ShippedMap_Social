@@ -89,7 +89,7 @@ $results = $wpdb->get_results($query);
 
 $images = [];
 $titles = [];
-$return = [];
+$return = array();
 foreach ($results as $ID ) {
     $post_id = $ID->post_id;
     $post = get_field("images", $post_id);
@@ -106,7 +106,8 @@ foreach ($results as $ID ) {
 header("Content-Type: application/json");
 
 //echo wp_json_encode($images);
-$return = array_merge($images, $titles);
+$return['images'] = $images;
+$return['names'] = $titles;
 echo wp_json_encode($return);
 var_dump($return);
 

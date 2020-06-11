@@ -70,8 +70,10 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <div id="openModal" class="modalDialog" style="display: none;">
     <div class="modal-content">
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
+        <center>
         <h2>Modal Box</h2>
         <p>~customers Name Here~</p>
+        </center>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">

@@ -51,8 +51,10 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 success:function (output) {
                     for (i = 0; i < output['images'].length; i++) {
                         slides += '<div class="swiper-slide"><img src=' + output['images'][i] + '></div><br>';
+                        name = output['names'][i];
                     }
                     $('#openModal h2').html(state);
+                    $('#name p').html(name);
                     $('#swiper').html(slides);
                     $('#openModal').show();
                 },
@@ -72,7 +74,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <center>
         <h2>Modal Box</h2>
-        <p>~customers Name Here~</p>
+        <p id='name'>~customers Name Here~</p>
         </center>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">

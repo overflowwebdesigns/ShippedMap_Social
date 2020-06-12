@@ -19,6 +19,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     {
     if(!$(event.target).closest('#openModal').length && !$(event.target).is('#openModal')) {
         $(".modalDialog").hide();
+        mapModalSwiper.destroy();
     }     
     });
 
@@ -110,9 +111,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
-        <script>
-
-    </script>
     </div>
     </div>
 

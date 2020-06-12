@@ -53,7 +53,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
                         slides += '<img class="mySlides" src=' + output[i] + 'style="width:100%">';
                     }
                     $('#openModal h2').html(state);
-                    $('#openModal p').html(name);
                     $('#swiper').html(slides);
                     $('#openModal').show();
                 },

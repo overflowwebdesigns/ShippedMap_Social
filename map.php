@@ -95,7 +95,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         var mySwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
-            
+            loop: true,
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
@@ -109,6 +109,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             	prevEl: '.swiper-button-prev',
             },
         })
+        mySwiper.update();
     </script>
     </div>
     </div>

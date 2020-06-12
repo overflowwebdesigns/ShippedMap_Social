@@ -54,6 +54,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#swiper').html(slides);
                     $('#slide-title h2').html(state);
                     $('#openModal').show();
+                    alert(states[state]);
                     window.mapModalSwiper = new Swiper ('.swiper-container', {
                         // Optional parameters
                         direction: 'horizontal',

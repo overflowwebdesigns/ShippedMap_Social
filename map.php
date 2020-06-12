@@ -53,7 +53,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#openModal h2').html(state);
                     $('#swiper').html(slides);
                     $('#openModal').show();
-                    MySwiper..update();
+                    MySwiper.update();
                 },
                 error:function (error) {
                     

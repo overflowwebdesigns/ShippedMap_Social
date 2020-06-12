@@ -68,7 +68,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <body>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div class="modal-content">
-        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide(), mapModalSwiper.init()">X</a>
+        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide(), mapModalSwiper.update();">X</a>
         <center>
         <h2>Modal Box</h2>
         <p>~customers Name Here~</p>

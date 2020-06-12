@@ -12,8 +12,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
     </head>
     <center>
-    <h2 class="elementor-heading-title elementor-size-default">Who is wearing Loud Proud American?</h2>
-    <h3 class="elementor-heading-title elementor-size-default">Help us cover the USA!</h3>
     <div id="map" style="width: auto; height: 800px;">
     <script>
 

@@ -109,8 +109,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
             	nextEl: '.swiper-button-next',
             	prevEl: '.swiper-button-prev',
             },
+            mySwiper.update();
         })
-        mySwiper.update();
+        
     </script>
     </div>
     </div>

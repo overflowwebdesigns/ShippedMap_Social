@@ -93,7 +93,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <h2></h2>
         </center>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-        <script src="js/js_functions.js"></script>
+        <script src="/wp-content/plugins/ShippedMap_Social/js/js_functions.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
         <!-- Slider main container -->

@@ -93,7 +93,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <div class="swiper-scrollbar"></div>
         </div>
         <script>
-        windows.mapModalSwiper = new Swiper ('.swiper-container', {
+        window.mapModalSwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,

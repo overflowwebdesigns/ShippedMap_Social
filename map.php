@@ -53,6 +53,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#openModal h2').html(state);
                     $('#swiper').html(slides);
                     $('#openModal').show();
+                    MySwiper..update();
                 },
                 error:function (error) {
                     
@@ -101,8 +102,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
             slidesPerColumn: 1,
             observer: true,
             observeParents: true,
-            observeSlideChildren: true,
-            debugger: true,
 
             pagination: {
             el: '.swiper-pagination',
@@ -113,7 +112,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
             	prevEl: '.swiper-button-prev',
             },
         })
-        mySwiper.update();
     </script>
     </div>
     </div>

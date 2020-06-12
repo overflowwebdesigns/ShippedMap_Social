@@ -10,7 +10,6 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
-    <script src="js/js_functions.js"></script>
     </head>
     <center>
     <div id="map" style="width: auto; height: 800px;">
@@ -89,11 +88,12 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <body>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div class="modal-content">
-        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide(), mapModalSwiper.destroy();">X</a>
+        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide(), <script>mapModalSwiper.destroy();</script>">X</a>
         <center>
         <h2></h2>
         </center>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script src="js/js_functions.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
         <!-- Slider main container -->

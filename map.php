@@ -96,22 +96,18 @@ $orders = wc_get_orders(array()); //Gets all orders.
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-            centeredSlides: true,
-            slidesPerView: 1,
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
-            loopedSlides: 2,
-            slidesPerView: 1,
-            slidesPerColumn: 1,
 
             pagination: {
             el: '.swiper-pagination',
             },
+
             navigation: {
             	nextEl: '.swiper-button-next',
             	prevEl: '.swiper-button-prev',
-            }
+            },
         })
     </script>
     </div>

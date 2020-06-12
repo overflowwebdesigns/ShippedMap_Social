@@ -53,7 +53,25 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#openModal h2').html(state);
                     $('#swiper').html(slides);
                     $('#openModal').show();
-                    mapModalSwiper.init();
+                    window.mapModalSwiper = new Swiper ('.swiper-container', {
+                        // Optional parameters
+                        direction: 'horizontal',
+                        loop: true,
+                        initialSlide: 0,
+                        slidesPerView: 1,
+                        slidesPerColumn: 1,
+                        observer: true,
+                        observeParents: true,
+
+                        pagination: {
+                        el: '.swiper-pagination',
+                        },
+
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    })
                 },
                 error:function (error) {
                     
@@ -68,7 +86,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <body>
     <div id="openModal" class="modalDialog" style="display: none;">
     <div class="modal-content">
-        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide(), mapModalSwiper.update();">X</a>
+        <a href="#close" title="Close" class="close" onclick="$('#openModal').hide()">X</a>
         <center>
         <h2>Modal Box</h2>
         <p>~customers Name Here~</p>
@@ -93,25 +111,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <div class="swiper-scrollbar"></div>
         </div>
         <script>
-        window.mapModalSwiper = new Swiper ('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            initialSlide: 0,
-            slidesPerView: 1,
-            slidesPerColumn: 1,
-            observer: true,
-            observeParents: true,
 
-            pagination: {
-            el: '.swiper-pagination',
-            },
-
-            navigation: {
-            	nextEl: '.swiper-button-next',
-            	prevEl: '.swiper-button-prev',
-            },
-        })
     </script>
     </div>
     </div>

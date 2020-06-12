@@ -53,7 +53,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     $('#openModal h2').html(state);
                     $('#swiper').html(slides);
                     $('#openModal').show();
-                    MySwiper.update();
+                    mapModalSwiper.update();
                 },
                 error:function (error) {
                     
@@ -93,7 +93,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             <div class="swiper-scrollbar"></div>
         </div>
         <script>
-        var mySwiper = new Swiper ('.swiper-container', {
+        windows.mapModalSwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,

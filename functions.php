@@ -87,21 +87,24 @@ $state = $_POST['state'];
 $query = $wpdb->prepare('SELECT post_id FROM wp_postmeta WHERE meta_key = "state" AND meta_value = "' . $state . '";');
 $results = $wpdb->get_results($query);
 
+$names = [];
 $images = [];
+$return = array();
 foreach ($results as $ID ) {
     $post_id = $ID->post_id;
     $post = get_field("images", $post_id);
     array_push($images, $post);
-
-    //wp_send_json($post);
-    //echo "<img src=" . $post . ">";
-    //$post_encode = wp_json_encode($post);
-    //echo '<div id="swiper" class="swiper-slide"><img src=' . wp_send_json($post) . '></div>';
+    $title = get_the_title($post_id);
+    array_push($names, $title);
     
 }
 
 header("Content-Type: application/json");
-echo wp_json_encode($images);
+
+$return['images'] = $images;
+$return['names'] = $names;
+echo wp_json_encode($return);
+//echo wp_json_encode($images);
 
 wp_die();
 }

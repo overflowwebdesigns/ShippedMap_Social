@@ -52,9 +52,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
                         slides += '<div class="swiper-slide"><div id="slide-title"><center><h2></h2><p>' + output['names'][i] + '</p></center></div><br><img src=' + output['images'][i] + '></div>';
                     }
                     $('#swiper').html(slides);
-                    $('#slide-title h2').html(state);
+                    $('#slide-title h2').html('Who is rocking our gear in ' + states[state] + '?');
                     $('#openModal').show();
-                    alert(states[state]);
                     window.mapModalSwiper = new Swiper ('.swiper-container', {
                         // Optional parameters
                         direction: 'horizontal',

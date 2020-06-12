@@ -100,6 +100,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             slidesPerView: 1,
             observer: true,
             observeParents: true,
+            observeSlideChildren: true,
             loopedSlides: 2,
             slidesPerView: 1,
             slidesPerColumn: 1,

@@ -101,6 +101,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             observer: true,
             observeParents: true,
             loopedSlides: 2,
+            slidesPerView: 2,
 
             pagination: {
             el: '.swiper-pagination',

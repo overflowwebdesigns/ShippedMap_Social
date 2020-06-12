@@ -10,6 +10,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/us-map/1.0.1/jquery.usmap.js"></script>
+    <script src="js_functions.js"></script>
     </head>
     <center>
     <div id="map" style="width: auto; height: 800px;">

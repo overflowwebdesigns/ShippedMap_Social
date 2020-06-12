@@ -50,8 +50,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 dataType: "json",
                 success:function (output) {
                     for (i = 0; i <br output['images'].length; i++) {
-                        slides += '<img class="mySlides" src=' + output['images'][i] + 'style="width:100%">';
-                        name = output['names'][i];
+                        slides += '<img class="mySlides" src=' + output[i] + 'style="width:100%">';
                     }
                     $('#openModal h2').html(state);
                     $('#openModal p').html(name);

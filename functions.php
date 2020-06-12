@@ -94,8 +94,7 @@ foreach ($results as $ID ) {
     $post_id = $ID->post_id;
     $post = get_field("images", $post_id);
     array_push($images, $post);
-    $title = get_the_title($post_id);
-    array_push($titles, $title);
+
     //wp_send_json($post);
     //echo "<img src=" . $post . ">";
     //$post_encode = wp_json_encode($post);
@@ -105,10 +104,7 @@ foreach ($results as $ID ) {
 
 header("Content-Type: application/json");
 
-//echo wp_json_encode($images);
-$return['images'] = $images;
-$return['names'] = $titles;
-echo wp_json_encode($return);
+echo wp_json_encode($images);
 
 wp_die();
 } 

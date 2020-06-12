@@ -50,7 +50,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 dataType: "json",
                 success:function (output) {
                     for (i = 0; i <br output['images'].length; i++) {
-                        slides += '<div class="title" data-swiper-parallax="-100">' + output['names'][i] + '</div><div class="swiper-slide"><img src=' + output['images'][i] + '></div><br>';
+                        slides += '<img class="mySlides" src=' + output['images'][i] + 'style="width:100%">';
                         name = output['names'][i];
                     }
                     $('#openModal h2').html(state);
@@ -76,45 +76,37 @@ $orders = wc_get_orders(array()); //Gets all orders.
         <h2>Modal Box</h2>
         <p>~customers Name Here~</p>
         </center>
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div id="swiper" class="swiper-wrapper">
-                
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+        <h2 class="w3-center">Manual Slideshow</h2>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        <div id="slider" class="w3-content w3-display-container">
+        <img class="mySlides" src="img_snowtops.jpg" style="width:100%">
+        <img class="mySlides" src="img_lights.jpg" style="width:100%">
+        <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+        <img class="mySlides" src="img_forest.jpg" style="width:100%">
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
-        <script>
-        var mySwiper = new Swiper ('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: 1,
-            observer: true,
-            observeParents: true,
-            parallax:true,
 
-            pagination: {
-            el: '.swiper-pagination',
-            },
-            navigation: {
-            	nextEl: '.swiper-button-next',
-            	prevEl: '.swiper-button-prev',
-            }
-        })
-    </script>
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+        }
+        </script>
     </div>
     </div>
 

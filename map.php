@@ -89,8 +89,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
     <div class="modal-content">
         <a href="#close" title="Close" class="close" onclick="$('#openModal').hide(), mapModalSwiper.destroy();">X</a>
         <center>
-        <h2>Modal Box</h2>
-        <p>~customers Name Here~</p>
+        <h2></h2>
         </center>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">

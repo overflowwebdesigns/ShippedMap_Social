@@ -96,6 +96,9 @@ $orders = wc_get_orders(array()); //Gets all orders.
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            initialSlide: 0,
+            slidesPerView: 1,
+            slidesPerColumn: 1,
             observer: true,
             observeParents: true,
             observeSlideChildren: true,

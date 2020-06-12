@@ -99,6 +99,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
+            debugger: true,
 
             pagination: {
             el: '.swiper-pagination',

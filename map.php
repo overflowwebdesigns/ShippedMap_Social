@@ -49,12 +49,10 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 },
                 dataType: "json",
                 success:function (output) {
-                    for (i = 0; i < output['images'].length; i++) {
-                        slides += '<div class="swiper-slide"><img src=' + output['images'][i] + '></div><br>';
-                        name = output['names'][i];
+                    for (i = 0; i < output.length; i++) {
+                        slides += '<div class="swiper-slide"><img src=' + output[i] + '></div><br>';
                     }
                     $('#openModal h2').html(state);
-                    $('#openModal p').html(name);
                     $('#swiper').html(slides);
                     $('#openModal').show();
                 },
@@ -105,6 +103,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
             observer: true,
             observeParents: true,
 
+            pagination: {
             el: '.swiper-pagination',
             },
             navigation: {

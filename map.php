@@ -51,8 +51,8 @@ $orders = wc_get_orders(array()); //Gets all orders.
                     for (i = 0; i < output['images'].length; i++) {
                         slides += '<div class="swiper-slide"><div id="side-title"><center<br><p>' + output['names'][i] + '</p></center></div><br><img src=' + output['images'][i] + '></div>';
                     }
-                    $('#slide-title h2').html(state);
                     $('#swiper').html(slides);
+                    $('#slide-title h2').html(state);
                     $('#openModal').show();
                     window.mapModalSwiper = new Swiper ('.swiper-container', {
                         // Optional parameters

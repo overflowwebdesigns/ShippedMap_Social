@@ -48,7 +48,7 @@ $orders = wc_get_orders(array()); //Gets all orders.
                 dataType: "json",
                 success:function (output) {
                     for (i = 0; i < output.length; i++) {
-                        slides += '<div class="swiper-slide"><img src=' + output[i] + '></div><br>';
+                        slides += '<div class="swiper-slide"><img src=' + output[i] + '></div>';
                     }
                     $('#openModal h2').html(state);
                     $('#swiper').html(slides);
